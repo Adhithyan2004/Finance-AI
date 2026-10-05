@@ -111,7 +111,7 @@ export default function RecommendationSection({ recommendations }: Props) {
                       What is it?
                     </p>
 
-                    <p className="text-sm leading-6 text-white/40">
+                    <p className="text-sm leading-6 text-white">
                       {recommendation.education.whatIsIt}
                     </p>
                   </div>
@@ -121,7 +121,7 @@ export default function RecommendationSection({ recommendations }: Props) {
                       How does it work?
                     </p>
 
-                    <p className="text-sm leading-6 text-white/40">
+                    <p className="text-sm leading-6 text-white">
                       {recommendation.education.howItWorks}
                     </p>
                   </div>
@@ -131,7 +131,7 @@ export default function RecommendationSection({ recommendations }: Props) {
                       Potential returns
                     </p>
 
-                    <p className="text-sm leading-6 text-white/40">
+                    <p className="text-sm leading-6 text-white">
                       {recommendation.education.potentialReturns}
                     </p>
                   </div>
@@ -141,7 +141,7 @@ export default function RecommendationSection({ recommendations }: Props) {
                       Why consider it?
                     </p>
 
-                    <p className="text-sm leading-6 text-white/40">
+                    <p className="text-sm leading-6 text-white">
                       {recommendation.education.whyConsider}
                     </p>
                   </div>
@@ -151,7 +151,7 @@ export default function RecommendationSection({ recommendations }: Props) {
                       Things to know
                     </p>
 
-                    <p className="text-sm leading-6 text-white/40">
+                    <p className="text-sm leading-6 text-white">
                       {recommendation.education.thingsToKnow}
                     </p>
                   </div>
