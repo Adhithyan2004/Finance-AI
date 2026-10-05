@@ -1,7 +1,5 @@
 import { Expense } from "@/types/finance";
 
-const API_URL = "http://localhost:5000";
-
 type RecommendationResponse = {
   success: boolean;
   remaining: number;
@@ -22,11 +20,8 @@ export type Recommendation = {
   };
 };
 
-export async function getRecommendations(
-  income: number,
-  expenses: Expense[]
-) {
-  const response = await fetch(`${API_URL}/api/recommendations`, {
+export async function getRecommendations(income: number, expenses: Expense[]) {
+  const response = await fetch("/api/recommendations", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -40,9 +35,7 @@ export async function getRecommendations(
   if (!response.ok) {
     const error = await response.json();
 
-    throw new Error(
-      error.message || "Failed to get recommendations"
-    );
+    throw new Error(error.message || "Failed to get recommendations");
   }
 
   const data: RecommendationResponse = await response.json();
