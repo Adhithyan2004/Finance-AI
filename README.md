@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Finance AI
 
-## Getting Started
+An AI-powered personal finance assistant that helps you understand your monthly finances and find smarter ways to use your leftover money.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+https://finance-recommendor.vercel.app/
+
+## What It Does
+
+Finance AI lets you:
+
+- Enter your monthly income
+- Add your regular expenses
+- Calculate your remaining balance
+- Get AI-powered recommendations for using the leftover money
+- Learn about each recommendation, including risks, how it works, and potential returns
+
+The core flow is:
+
+**Income → Expenses → Remaining Balance → AI Recommendations → Financial Education**
+
+The goal is to make personal finance simpler and easier to understand, especially for people who are new to saving and investing.
+
+## AI
+
+Finance AI uses **Groq** with the open-weight **GPT-OSS 120B** model to generate structured financial recommendations.
+
+The AI receives the user's income, expenses, and remaining balance and returns three possible ways to consider using the leftover money.
+
+Each recommendation includes:
+
+- Summary
+- Suggested amount
+- Risk level
+- What it is
+- How it works
+- Potential returns
+- Why to consider it
+- Things to know
+
+The application is designed as **educational guidance, not personalized financial advice**.
+
+## Tech Stack
+
+- **Next.js**
+- **TypeScript**
+- **React**
+- **Tailwind CSS**
+- **Groq**
+- **GPT-OSS 120B**
+- **Vercel**
+
+## Architecture
+
+```text
+User
+  │
+  ▼
+Next.js Frontend
+  │
+  ▼
+/api/recommendations
+  │
+  ▼
+Groq
+  │
+  ▼
+GPT-OSS 120B
+  │
+  ▼
+Structured Recommendations
+  │
+  ▼
+Finance AI UI
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
